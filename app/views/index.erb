@@ -8,12 +8,14 @@
     <input type="submit" value="Search!">
   </form>
 
+<% if @input_word %>
   <p>
     <p>Anagrams for: </p>
     <p><%=@input_word.word%></p>
   <p>Anagrams:</p>
-  <% @anagrams.each do |a| %>
+    <% @anagrams.each do |a| %>
     <%= a.word  %><br>
     <% end %>
-</p>
+  </p>
+  <% end %>
 </div>
